@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Plodiny2
 {   // *
-    internal class Hovezi : Plodina
+    public class Hovezi : Plodina
     {
         public int zbyvajiciZrani; // zrání
 
@@ -13,6 +13,7 @@ namespace Plodiny2
             pocetBilkovin = 20;
             zbyvajiciZrani = zrani;
             barva = ConsoleColor.Cyan;
+            Name = "Hovězí";
         }
 
         protected override void Upgrade()

@@ -4,13 +4,15 @@ using System.Text;
 
 namespace Plodiny2
 {
-    internal class Plodina
+    public class Plodina
     {
         public int uroven = 0;
         public int pocetBilkovin;
         public int trvanlivost;
         public string puvod;
         public ConsoleColor barva;
+
+        public string Name;
 
         public static Random random = new Random();
 

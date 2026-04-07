@@ -3,6 +3,7 @@ namespace Plodiny2
     public partial class Form1 : Form
     {
         List<Plodina> plodiny;
+        List<PlodinaView> views;
         int bilkovin = 0;
         int dni = 0;
 
@@ -31,8 +32,13 @@ namespace Plodiny2
                 }
             }
 
-            for(int i = 0; i < plodiny.Count; i++) { 
-                
+            views = new List<PlodinaView>();
+            for (int i = 0; i < plodiny.Count; i++) {
+                PlodinaView p = new PlodinaView();
+                flowLayoutPanel1.Controls.Add(p);
+                views.Add(p);
+                p.OnDayEnded += AddDay;
+                p.SetPlodina(plodiny[i]);
             }
         }
 
@@ -44,6 +50,8 @@ namespace Plodiny2
         private void AddDay()
         {
             dni++;
+            plodiny.ForEach(p => p.Zestarni());
+            views.ForEach(v => v.UpdateView());
             daysLabel.Text = $"Poèet dnù: {dni}";
         }
 

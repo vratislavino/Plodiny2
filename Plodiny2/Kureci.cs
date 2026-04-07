@@ -4,13 +4,14 @@ using System.Text;
 
 namespace Plodiny2
 {
-    internal class Kureci : Plodina
+    public class Kureci : Plodina
     {
         public Kureci(string puvod) : base(puvod)
         {
             trvanlivost = 5;
             pocetBilkovin = 11;
             barva = ConsoleColor.Yellow;
+            Name = "Kuřecí";
         }
 
         protected override void Upgrade()

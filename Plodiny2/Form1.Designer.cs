@@ -30,15 +30,13 @@
         {
             button1 = new Button();
             daysLabel = new Label();
-            plodinaView1 = new PlodinaView();
-            plodinaView2 = new PlodinaView();
-            plodinaView3 = new PlodinaView();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            button1.Location = new Point(347, 384);
+            button1.Location = new Point(538, 841);
             button1.Name = "button1";
             button1.Size = new Size(312, 242);
             button1.TabIndex = 0;
@@ -56,38 +54,20 @@
             daysLabel.TabIndex = 1;
             daysLabel.Text = "label1";
             // 
-            // plodinaView1
+            // flowLayoutPanel1
             // 
-            plodinaView1.BorderStyle = BorderStyle.FixedSingle;
-            plodinaView1.Location = new Point(29, 69);
-            plodinaView1.Name = "plodinaView1";
-            plodinaView1.Size = new Size(350, 459);
-            plodinaView1.TabIndex = 2;
-            // 
-            // plodinaView2
-            // 
-            plodinaView2.BorderStyle = BorderStyle.FixedSingle;
-            plodinaView2.Location = new Point(385, 69);
-            plodinaView2.Name = "plodinaView2";
-            plodinaView2.Size = new Size(350, 459);
-            plodinaView2.TabIndex = 3;
-            // 
-            // plodinaView3
-            // 
-            plodinaView3.BorderStyle = BorderStyle.FixedSingle;
-            plodinaView3.Location = new Point(741, 69);
-            plodinaView3.Name = "plodinaView3";
-            plodinaView3.Size = new Size(350, 459);
-            plodinaView3.TabIndex = 4;
+            flowLayoutPanel1.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanel1.Location = new Point(12, 60);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1445, 775);
+            flowLayoutPanel1.TabIndex = 2;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1156, 696);
-            Controls.Add(plodinaView3);
-            Controls.Add(plodinaView2);
-            Controls.Add(plodinaView1);
+            ClientSize = new Size(1469, 1130);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(daysLabel);
             Controls.Add(button1);
             Name = "Form1";
@@ -101,8 +81,6 @@
 
         private Button button1;
         private Label daysLabel;
-        private PlodinaView plodinaView1;
-        private PlodinaView plodinaView2;
-        private PlodinaView plodinaView3;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
