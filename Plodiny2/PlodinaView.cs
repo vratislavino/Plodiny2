@@ -24,7 +24,13 @@ namespace Plodiny2
         public void SetPlodina(Plodina plodina)
         {
             this.plodina = plodina;
+            this.plodina.Umrela += PlodinaUmrela;
             UpdateView();
+        }
+
+        private void PlodinaUmrela()
+        {
+            panel2.Visible = true;
         }
 
         public void UpdateView()

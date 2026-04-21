@@ -24,7 +24,7 @@ namespace Plodiny2
 
         public override int Sklidit()
         {
-            uroven = -1;
+            Umri();
 
             if(zbyvajiciZrani > 0)
             {

@@ -25,7 +25,7 @@ namespace Plodiny2
             }
 
             if(random.Next(0, 100) < 10) {
-                uroven = -1;
+                Umri();
             }
         }
     }

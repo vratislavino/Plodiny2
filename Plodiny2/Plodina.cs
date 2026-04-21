@@ -6,6 +6,8 @@ namespace Plodiny2
 {
     public class Plodina
     {
+        public event Action Umrela;
+
         public int uroven = 0;
         public int pocetBilkovin;
         public int trvanlivost;
@@ -32,8 +34,14 @@ namespace Plodiny2
         }
 
         public virtual int Sklidit() {
-            uroven = -1;
+            Umri();
             return pocetBilkovin;
+        }
+
+        protected void Umri()
+        {
+            uroven = -1;
+            Umrela?.Invoke();
         }
 
         protected virtual void Upgrade() {
@@ -47,7 +55,7 @@ namespace Plodiny2
             trvanlivost--;
             if(trvanlivost <= 0)
             {
-                uroven = -1;
+                Umri();
             }
         } 
 

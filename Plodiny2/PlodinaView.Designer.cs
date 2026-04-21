@@ -35,6 +35,7 @@
             label3 = new Label();
             button1 = new Button();
             button2 = new Button();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -110,11 +111,21 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Red;
+            panel2.Location = new Point(0, 64);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(235, 243);
+            panel2.TabIndex = 5;
+            panel2.Visible = false;
+            // 
             // PlodinaView
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(panel2);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(panel1);
@@ -135,5 +146,6 @@
         private Label label3;
         private Button button1;
         private Button button2;
+        private Panel panel2;
     }
 }
